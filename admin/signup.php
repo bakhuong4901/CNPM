@@ -127,10 +127,10 @@
                 <span class="fas fa-key"></span> <input type="contact"name="txtcontact" id="contact" placeholder="contact" require> 
             </div> 
             <div class="form-field d-flex align-items-center"> 
-                <span class="fas fa-key"></span> <input type="password"name="txtPass1" id="Password" placeholder="Password" require> 
+                <span class="fas fa-key"></span> <input type="password"name="txtPass1" id="Password" placeholder="Password" required > 
             </div> 
             <div class="form-field d-flex align-items-center"> 
-                <span class="fas fa-key"></span> <input type="password"name="txtPass2" id="Password" placeholder="Retype Password" require> 
+                <span class="fas fa-key"></span> <input type="password"name="txtPass2" id="Password" placeholder="Retype Password" required > 
             </div> 
            
             <button class="btn mt-3" name="btnSignUp">Sign Up</button>

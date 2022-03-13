@@ -2,10 +2,10 @@
 -- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th3 05, 2022 lúc 02:36 PM
+-- Máy chủ: localhost
+-- Thời gian đã tạo: Th3 10, 2022 lúc 06:54 PM
 -- Phiên bản máy phục vụ: 10.4.21-MariaDB
--- Phiên bản PHP: 8.0.12
+-- Phiên bản PHP: 7.4.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -179,7 +179,6 @@ INSERT INTO `system_settings` (`id`, `name`, `email`, `contact`, `cover_img`, `a
 
 CREATE TABLE `users` (
   `id` int(30) NOT NULL,
-  `doctor_id` int(30) NOT NULL,
   `name` varchar(200) NOT NULL,
   `address` text NOT NULL,
   `contact` text NOT NULL,
@@ -192,14 +191,15 @@ CREATE TABLE `users` (
 -- Đang đổ dữ liệu cho bảng `users`
 --
 
-INSERT INTO `users` (`id`, `doctor_id`, `name`, `address`, `contact`, `username`, `password`, `type`) VALUES
-(1, 0, 'admin', '', '', 'admin', 'admin123', 1),
-(7, 0, 'Le Duc Huan', 'Hà Nội', '0991212121', 'ldh@gmail.com', 'ldh', 2),
-(9, 2, 'Ngô Văn Huân', 'Thái Bình', '0322323232', 'nvh@gmail.com', 'nvh', 2),
-(10, 3, 'Lê Thành An', 'Hà Nội', '0448949944', 'lta@gmail.com', 'lta', 2),
-(11, 0, 'nam', 'ha noi', '+09999987766', 'nam@sample.com', 'nam', 2),
-(15, 9, 'Nguyễn quỳnh Hương', 'Sample Address', '+1235 456 623', 'qh@gmail.com', 'qh', 2),
-(27, 0, 'nhữ văn chiến', 'hà nội', '01921919212', 'nvc@gmail.com', 'chien', 2);
+INSERT INTO `users` (`id`, `name`, `address`, `contact`, `username`, `password`, `type`) VALUES
+(1, 'admin', '', '', 'admin', 'admin123', 1),
+(7, 'Le Duc Huan', 'Hà Nội', '0991212121', 'ldh@gmail.com', 'ldh', 2),
+(9, 'Ngô Văn Huân', 'Thái Bình', '0322323232', 'nvh@gmail.com', 'nvh', 2),
+(10, 'Lê Thành An', 'Hà Nội', '0448949944', 'lta@gmail.com', 'lta', 2),
+(11, 'nam', 'ha noi', '+09999987766', 'nam@sample.com', 'nam', 2),
+(15, 'Nguyễn quỳnh Hương', 'Sample Address', '+1235 456 623', 'qh@gmail.com', 'qh', 2),
+(27, 'nhữ văn chiến', 'hà nội', '01921919212', 'nvc@gmail.com', 'chien', 2),
+(28, 'khuong', 'bacnih', '093', 'khuong123@gmail.com', '123', 2);
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -293,7 +293,7 @@ ALTER TABLE `system_settings`
 -- AUTO_INCREMENT cho bảng `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- Các ràng buộc cho các bảng đã đổ

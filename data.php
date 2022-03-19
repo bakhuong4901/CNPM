@@ -12,45 +12,30 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
 </head>
 <style>
- 
+   .images img {
+       width: 350px;
+       height: 200px;
+       object-fit: cover;
+       margin: 5px;
+   }
 </style>
 <body>
     <main>
-        <div class="container data">
+        <div class="container">
             <div class="row">
-                <?php
-                $conn = mysqli_connect('localhost', 'root', '', 'flight_booking_db');
-                if (!$conn) {
-                    die("Kết nối thất bại. Vui lòng kiểm tra lại các thông tin máy chủ");
-                }
-
-                // Bước 02: Thực hiện truy vấn
-                $sql = "SELECT * FROM hahalolo_data_blogs";
-                $result = mysqli_query($conn, $sql);
-                // Bước 03: Xử lý kết quả truy vấn
-                if (mysqli_num_rows($result) > 0) {
-                    while ($row = mysqli_fetch_array($result)) {
-                        $id = $row["id"];
-
-                ?>
-
-                        <div class="container_box col-md-4 mt-4 ">
-                            <div class="container_box_card col-md-12">
-                                <div class="container_image">
-                                    <a href="http://localhost:88/baitaplon_hahalolo/details/detailpro.php?view=detail&id=<?php echo $id; ?>">
-                                        <img href src="./images/<?php echo $row['images_name']; ?>" />
-                                    </a>
-                                </div>
-                                <div class="container_info">
-                                    <p style="font-size: 17px" class="mt-3"><?php echo $row['title']; ?></p>
-                                </div>
-                            </div>
-                        </div>
-
-                <?php
-                    }
-                }
-                ?>
+                <div class="images">
+                <img src="./images/anh1.png" alt="">
+              <img src="./images/anh2.png" alt="">
+              <img src="./images/anh3.png" alt="">
+              <img src="./images/anh4.png" alt="">
+              <img src="./images/anh5.png" alt="">
+              <img src="./images/anh6.png" alt="">
+              <img src="./images/anh7.png" alt="">
+              <img src="./images/anh8.png" alt="">
+              <img src="./images/anh9.png" alt="">
+                </div>
+            
+                    
             </div>
         </div>
     </main>

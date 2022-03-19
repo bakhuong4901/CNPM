@@ -84,6 +84,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
                 </div>
             </div>
         </header>
+//Tìm kiếm 
 	<section class="page-section" id="flight" >
         <div class="container">
         	<div class="card">

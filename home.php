@@ -145,11 +145,11 @@ include 'admin/db_connect.php';
     </div>
 </header>
 <section class="page-section" id="menu">
-
+<?php
+include 'data.php';
+?>
   
-    <?php
-    include("data.php");
-    ?>
+    
     <script>
         $('.view_prod').click(function() {
             uni_modal_right('Product', 'view_prod.php?id=' + $(this).attr('data-id'))

@@ -84,11 +84,9 @@ ob_start();
 include('header.php');
 include('admin/db_connect.php');
 
-$query = $conn->query("SELECT * FROM system_settings limit 1")->fetch_array();
-foreach ($query as $key => $value) {
-  if (!is_numeric($key))
-    $_SESSION['setting_' . $key] = $value;
-}
+
+
+ 
 ob_end_flush();
 ?>
 
@@ -110,7 +108,7 @@ ob_end_flush();
         <nav class="navbar navbar-expand-lg  bg-light">
           <div class="left d-flex">
             <div class="logo">
-              <img src="./assets/img/<?php echo $_SESSION['setting_name'] ?>" />
+              <img src="./images/logo.png"/>
             </div>
           </div>
 
